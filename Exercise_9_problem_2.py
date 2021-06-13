@@ -35,7 +35,7 @@ from pyproj import CRS
 fp="Kruger_posts.shp"
 
 # Convert DataFrame into a GeoDataFrame
-geo=gpd.GeoDataFrame(data,geimetry='geometry',crs=CRS.from_epsg(4326).to_wkt())
+geo=gpd.GeoDataFrame(data,geometry='geometry',crs=CRS.from_epsg(4326).to_wkt())
 
 # CODE FOR TESTING YOUR SOLUTION
 
@@ -56,7 +56,6 @@ assert os.path.isfile(fp), "output shapefile does not exist"
 
 # YOUR CODE HERE 3
 geo.to_file(fp)
-
 geo.plot()
 geo.show()
 
